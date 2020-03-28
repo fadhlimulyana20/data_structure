@@ -43,6 +43,7 @@ void PrintPostorder(Node* node){
     }
 }
 
+
 void PrintPreorder(Node* node){
     // ?? Function to print node preorderly which is root, left, right
     if(node == NULL){
@@ -56,7 +57,7 @@ void PrintPreorder(Node* node){
 
         //?? Third print the right of the node
         PrintPostorder(node->right);
-    }
+    } 
 }
 
 int main(){
