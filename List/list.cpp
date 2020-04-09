@@ -44,4 +44,29 @@ int main(){
 
     // ?? Check the size
     cout << "myList Size : " << myList.size() << endl;
+
+    //?? Pop Front
+    cout << myList.front() << " popped" << endl;
+    myList.pop_front();
+
+    // ?? Check the size
+    cout << "myList Size : " << myList.size() << endl;
+
+    //?? Pop Front
+    cout << myList.back() << " popped" << endl;
+    myList.pop_back();
+
+    // ?? Check the size
+    cout << "myList Size : " << myList.size() << endl;
+
+    // ? change the element
+    std::list<int>::iterator advanceIt=myList.begin();
+    advance(advanceIt,1);
+    *advanceIt = 21;
+
+    //?? Print List after push front
+    cout << "myList after change :" << endl;
+    for(std::list<int>:: iterator it=myList.begin(); it !=myList.end(); ++it){
+        cout  << *it << ", ";
+    }
 }

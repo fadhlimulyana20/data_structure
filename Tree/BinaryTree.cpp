@@ -9,7 +9,7 @@ class Node{
          data = n;
          left = right = NULL;
      }
-};
+};  
 
 void PrintInorder(Node* node){
     // ?? Function to print node inorderly which is left, root, right
@@ -60,34 +60,47 @@ void PrintPreorder(Node* node){
     } 
 }
 
+Node* insert(Node* node, int key){
+    if (node == NULL) return new Node(key);
+
+    if(key < node->data){
+        node->left = insert(node->left, key);
+    }else if(key > node->data){
+        node->right = insert(node->right, key);
+    }
+
+    return node;
+}
+
 int main(){
     Node* head = NULL;
-    Node* seccond = NULL;
-    Node* third = NULL;
-    Node* fourth = NULL;
-    Node* fifth = NULL;
+    // Node* seccond = NULL;
+    // Node* third = NULL;
+    // Node* fourth = NULL;
+    // Node* fifth = NULL;
 
-    head = new Node(1);
-    seccond = new Node(2);
-    third = new Node(3);
-    fourth = new Node(4);
-    fifth = new Node(5);
+    head = new Node(6);
+    insert(head, 5);
+    // seccond = new Node(2);
+    // third = new Node(3);
+    // fourth = new Node(4);
+    // fifth = new Node(5);
 
-    head->left = seccond;
-    head->right = third;
+    // head->left = seccond;
+    // head->right = third;
 
-    seccond->left = fourth;
-    seccond->right = fifth;
+    // seccond->left = fourth;
+    // seccond->right = fifth;
 
     cout << "Print Inorderly : ";
     PrintInorder(head);
     cout << endl;
 
-    cout << "Print Postorderly : ";
-    PrintPostorder(head);
-    cout << endl;
+    // cout << "Print Postorderly : ";
+    // PrintPostorder(head);
+    // cout << endl;
 
-    cout << "Print Preorderly : ";
-    PrintPreorder(head);
-    cout << endl;
+    // cout << "Print Preorderly : ";
+    // PrintPreorder(head);
+    // cout << endl;
 }

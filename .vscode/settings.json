@@ -35,6 +35,23 @@
         "xstddef": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "fstream": "cpp",
+        "chrono": "cpp",
+        "ctime": "cpp",
+        "ratio": "cpp",
+        "array": "cpp",
+        "algorithm": "cpp",
+        "iterator": "cpp",
+        "set": "cpp",
+        "xtree": "cpp",
+        "queue": "cpp",
+        "map": "cpp",
+        "cctype": "cpp",
+        "deque": "cpp",
+        "stack": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "*.tcc": "cpp"
     }
 }
